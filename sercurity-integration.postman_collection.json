@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "5868fd80-2db2-48ee-b8ca-ebe005cfcafa",
+		"name": "sercurity-integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6754811"
+	},
+	"item": [
+		{
+			"name": "getvulnerabilities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/vulnerabilities?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"vulnerabilities"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postvulnerabilities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"level\": \"low\",\r\n    \"description\": \"python version vulnerability\",\r\n    \"request\": \"{}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/vulnerabilities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"vulnerabilities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
